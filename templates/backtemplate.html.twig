@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <!-- Mirrored from shreethemes.in/doctris/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 20:04:42 GMT -->
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+        <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health" />
+        <meta name="author" content="Shreethemes" />
+        <meta name="email" content="shreethemes@gmail.com" />
+        <meta name="website" content="http://www.shreethemes.in/" />
+        <meta name="Version" content="v1.0.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/back/images/favicon.ico">
+        <!-- Bootstrap -->
+        <link href="/back/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- simplebar -->
+        <link href="/back/css/simplebar.css" rel="stylesheet" type="text/css" />
+        <!-- Select2 -->
+        <link rel="stylesheet" href="/back/css/select2.min.css"/>
+        <!-- Icons -->
+        <link href="/back/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="/back/css/remixicon.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/back/css/line.css">
+        <!-- SLIDER -->
+        <link rel="stylesheet" href="/back/css/tiny-slider.css"/>
+        <!-- Css -->
+        <link href="/back/css/style.min.css" rel="stylesheet" type="text/css" />
+        {% block head %}{% endblock %}
+
+    </head>
+
+    <body>
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader -->
+
+    <div class="page-wrapper chiller-theme toggled">
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content" data-simplebar style="height: calc(100% - 60px);">
+                <div class="sidebar-brand">
+                    <a href="#"><img src="#" href="#" height="22" alt=""></a>
+                </div>
+
+                <ul class="sidebar-menu pt-3">
+                    <li><a href="{{ path('ajoutCategorieBack') }}"><i class="uil uil-dashboard me-2 d-inline-block"></i>Ajouter Catègorie</a></li>
+                    <li><a href="{{ path('affichageCategorieBack') }}"><i class="uil uil-stethoscope me-2 d-inline-block"></i>Afficher Catègorie</a></li>
+                    <li><a href="{{ path('affichageListeFilm') }}"><i class="uil uil-stethoscope me-2 d-inline-block"></i>Afficher Film</a></li>
+                    <li><a href="{{ path('ajouterFilm') }}"><i class="uil uil-stethoscope me-2 d-inline-block"></i>Ajout Film</a></li>
+
+                </ul>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <ul class="sidebar-footer list-unstyled mb-0">
+                <li class="list-inline-item mb-0 ms-1">
+                    <a href="#" class="btn btn-icon btn-pills btn-soft-primary">
+                        <i class="uil uil-comment icons"></i>
+                    </a>
+                </li>
+
+                <li class="list-inline-item mb-0 ms-1">
+                    <div class="dropdown dropdown-primary">
+                        <button type="button" class="btn btn-pills btn-soft-primary dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/back/images/language/american.png" class="avatar avatar-ex-small rounded-circle" alt=""></button>
+                        <div class="dropdown-menu dd-menu drop-ups dropdown-menu-end bg-white shadow border-0 mt-3 p-2" data-simplebar style="height: 175px;">
+                            <a href="javascript:void(0)" class="d-flex align-items-center">
+                                <img src="/back/images/language/chinese.png" class="avatar avatar-client rounded-circle shadow" alt="">
+                                <div class="flex-1 text-left ms-2 overflow-hidden">
+                                    <small class="text-dark mb-0">Chinese</small>
+                                </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="d-flex align-items-center mt-2">
+                                <img src="/back/images/language/european.png" class="avatar avatar-client rounded-circle shadow" alt="">
+                                <div class="flex-1 text-left ms-2 overflow-hidden">
+                                    <small class="text-dark mb-0">European</small>
+                                </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="d-flex align-items-center mt-2">
+                                <img src="/back/images/language/indian.png" class="avatar avatar-client rounded-circle shadow" alt="">
+                                <div class="flex-1 text-left ms-2 overflow-hidden">
+                                    <small class="text-dark mb-0">Indian</small>
+                                </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="d-flex align-items-center mt-2">
+                                <img src="/back/images/language/japanese.png" class="avatar avatar-client rounded-circle shadow" alt="">
+                                <div class="flex-1 text-left ms-2 overflow-hidden">
+                                    <small class="text-dark mb-0">Japanese</small>
+                                </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="d-flex align-items-center mt-2">
+                                <img src="/back/images/language/russian.png" class="avatar avatar-client rounded-circle shadow" alt="">
+                                <div class="flex-1 text-left ms-2 overflow-hidden">
+                                    <small class="text-dark mb-0">Russian</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- sidebar-wrapper  -->
+
+        <!-- Start Page Content -->
+        <main class="page-content bg-light">
+            <div class="top-header">
+                <div class="header-bar d-flex justify-content-between border-bottom">
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="logo-icon">
+                            <img src="/back/images/logo-icon.png" href="#" height="30" class="small" alt="">
+                            <img src="/back/images/logo-dark.png" href="#" height="22" class="big" alt="">
+                        </a>
+                        <a id="close-sidebar" class="btn btn-icon btn-pills btn-soft-primary ms-2" href="#">
+                            <i class="uil uil-bars"></i>
+                        </a>
+                        {% block recherche %}
+                        {% endblock %}
+                    </div>
+
+                    <ul class="list-unstyled mb-0">
+
+
+                    </ul>
+                </div>
+            </div>
+
+            {% block body %}
+
+            {% endblock %}
+
+
+
+
+            <!-- Footer Start -->
+            <footer class="bg-white shadow py-3">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="text-sm-start text-center">
+                                <p class="mb-0 text-muted"><script>document.write(new Date().getFullYear())</script> © E-Clinique. Design with <i class="mdi mdi-heart text-danger"></i> by <a class="text-reset">E-Clinique</a>.</p>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end container-->
+            </footer><!--end footer-->
+            <!-- End -->
+        </main>
+        <!--End page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    {% block javascripts %}{% endblock %}
+    <!-- javascript -->
+    <script src="/back/js/bootstrap.bundle.min.js"></script>
+    <!-- simplebar -->
+    <script src="/back/js/simplebar.min.js"></script>
+    <!-- Chart -->
+    <script src="/back/js/apexcharts.min.js"></script>
+    <script src="/back/js/columnchart.init.js"></script>
+    <!-- Icons -->
+    <script src="/back/js/feather.min.js"></script>
+    <!-- Main Js -->
+    <script src="/back/js/app-admin.js"></script>
+    <!-- Main Js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+
+
+
+    <!-- Mirrored from shreethemes.in/doctris/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Feb 2021 20:05:16 GMT -->
+    </html>

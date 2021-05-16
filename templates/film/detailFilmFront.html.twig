@@ -1,0 +1,328 @@
+{% extends 'fronttemplate.html.twig' %}
+{% block categorie %}
+    <li>
+        <a href="#0">movies</a>
+        <ul class="submenu">
+            {% for categorie in categorie %}
+                <li>
+                    <a href="{{ path('affichageFilm',{'id':categorie.id}) }}">{{ categorie.type }}</a>
+                </li>
+            {% endfor %}
+            <li><a href="{{ path('affichageListeFilmFront') }}"><B>Tous Les Catégories</B></a></li>
+        </ul>
+    </li>
+{% endblock %}
+{% block body%}
+    <section class="details-banner bg_img" data-background="./assets/images/banner/banner03.jpg">
+        <div class="container">
+            <div class="details-banner-wrapper">
+                <div class="details-banner-thumb">
+                        <img src="{{ asset('uploads/images/'~film.image) }}" alt="movie">
+                    <a href="https://www.youtube.com/embed/KGeBMAgc46E" class="video-popup">
+                        <img src="{{ asset('front/images/movie/video-button.png') }}" alt="movie">
+                    </a>
+                </div>
+                <div class="details-banner-content offset-lg-3">
+                    <h3 class="title">{{ film.titre }}</h3>
+                    <div class="tags">
+                        <a href="#0">English</a>
+                        <a href="#0">Hindi</a>
+                        <a href="#0">Telegu</a>
+                        <a href="#0">Tamil</a>
+                    </div>
+                    <a href="#0" class="button">{{ film.categorie.type }}</a>
+                    <div class="social-and-duration">
+                        <div class="duration-area">
+                            <div class="item">
+                                <i class="fas fa-calendar-alt"></i><span>{{ film.datesortie | date('Y-m-d') }}</span>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-clock"></i><span>{{ film.duree | date('Y-m-d') }}</span>
+                            </div>
+                        </div>
+                        <ul class="social-share">
+                            <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Book-Section========== -->
+    <section class="book-section bg-one">
+        <div class="container">
+            <div class="book-wrapper offset-lg-3">
+                <div class="left-side">
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+                                <img src="{{ asset('front/images/movie/tomato2.png') }}" alt="movie">
+                            </div>
+                            <div class="counter-area">
+                                <span class="counter-item odometer" data-odometer-final="88">0</span>
+                            </div>
+                        </div>
+                        <p>tomatometer</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+                                <img src="{{ asset('front/images/movie/cake2.png') }}" alt="movie">
+                            </div>
+                            <div class="counter-area">
+                                <span class="counter-item odometer" data-odometer-final="88">0</span>
+                            </div>
+                        </div>
+                        <p>audience Score</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <h5 class="title">{{ film.note }}</h5>
+                            <div class="rated">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <p>Note</p>
+                    </div>
+
+                </div>
+                <a href="#0" class="custom-button">book tickets</a>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Book-Section========== -->
+
+    <!-- ==========Movie-Section========== -->
+    <section class="movie-details-section padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-center flex-wrap-reverse mb--50">
+                <div class="col-lg-3 col-sm-10 col-md-6 mb-50">
+                    <div class="widget-1 widget-tags">
+                        <ul>
+                            <li>
+                                <a href="#0">2D</a>
+                            </li>
+                            <li>
+                                <a href="#0">imax 2D</a>
+                            </li>
+                            <li>
+                                <a href="#0">4DX</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-1 widget-offer">
+                        <h3 class="title">Recommandation Streaming</h3>
+                        <div class="offer-body">
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <img src="{{ asset('front/images/netflix.png') }}" alt="sidebar">
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="https://www.netflix.com/tn-fr/" target="_blank">Netflix</a>
+                                    </h6>
+                                    <p>Films, séries TV et bien plus en illimité.</p>
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <img src="{{ asset('front/images/Artify.png') }}" alt="sidebar">
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="https://artify.tn/" target="_blank">Artify</a>
+                                    </h6>
+                                    <p>Films, séries TV et bien plus en illimité.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 mb-50">
+                    <div class="movie-details">
+                        <h3 class="title">photos</h3>
+                        <div class="tab summery-review">
+                            <ul class="tab-menu">
+                                <li class="active">
+                                    summery
+                                </li>
+                                <li>
+                                    user review <span>147</span>
+                                </li>
+                            </ul>
+                            <div class="tab-area">
+                                <div class="tab-item active">
+                                    <div class="item">
+                                        <h5 class="sub-title">Description</h5>
+                                        <p>{{ film.description }}</p>
+                                    </div>
+
+                                <div class="tab-item">
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="./assets/images/cast/cast02.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">minkuk seo</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="{{ asset('front/images/cast/cast04.jpg') }}" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">rudra rai</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="./assets/images/cast/cast01.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">rafuj</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="./assets/images/cast/cast03.jpg" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">13 Days Ago</span>
+                                                <h6 class="subtitle"><a href="#0">bela bose</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">Awesome Movie</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada fringilla lectus venenatis porttitor. </p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="load-more text-center">
+                                        <a href="#0" class="custom-button transparent">load more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

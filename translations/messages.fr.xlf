@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Hk_oG3i" resname="Event Details">
+        <source>Event Details</source>
+        <target>detail évenement</target>
+      </trans-unit>
+      <trans-unit id="XYxxq8U" resname="About Us">
+        <source>About Us</source>
+        <target>à propos_</target>
+      </trans-unit>
+      <trans-unit id="cGqizzb" resname="Event Speaker">
+        <source>Event Speaker</source>
+        <target>__Event Speaker FR</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>acceuil</target>
+      </trans-unit>
+      <trans-unit id="5sm9OWq" resname="Home One">
+        <source>Home One</source>
+        <target>Acceuil 1</target>
+      </trans-unit>
+      <trans-unit id="2ktUoLi" resname="Home Two">
+        <source>Home Two</source>
+        <target>Acceuil 2</target>
+      </trans-unit>
+      <trans-unit id="hiQXuef" resname="events">
+        <source>events</source>
+        <target>évnements</target>
+      </trans-unit>
+      <trans-unit id="HLVCIox" resname="sports">
+        <source>sports</source>
+        <target>sports fr</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

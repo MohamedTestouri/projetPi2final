@@ -1,0 +1,14 @@
+{% extends 'fronttemplate.html.twig' %}
+{% block categorie %}
+    <li>
+        <a href="#0">movies</a>
+        <ul class="submenu">
+            {% for categorie in categorie %}
+                <li>
+                    <a href="{{ path('affichageFilm',{'id':categorie.id}) }}">{{ categorie.type }}</a>
+                </li>
+            {% endfor %}
+            <li><a href="{{ path('affichageListeFilmFront') }}"><B>Tous Les Catégories</B></a></li>
+        </ul>
+    </li>
+{% endblock %}

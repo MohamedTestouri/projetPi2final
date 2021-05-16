@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container-fluid">
+    <div class="layout-specing">
+    <div class="row">
+    <div class="col-lg-8 mt-4">
+        <div class="card border-0 p-4 rounded shadow" style="margin-left: 250px">
+            {{ form_start(form) }}
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Titre</label>
+                        {{ form_widget(form.titre) }}
+                    </div>
+                    <div class="form-error">
+                        {{ form_errors(form.titre)  }}
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Réalisé Par </label>
+                        {{ form_widget(form.realisepar) }}
+                    </div>
+                    <div class="form-error">
+                        {{ form_errors(form.realisepar)  }}
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Note</label>
+                        {{ form_widget(form.note) }}
+                    </div>
+                    <div class="form-error">
+                        {{ form_errors(form.note)  }}
+                    </div>
+                </div><!--end col-->
+
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Catègorie</label>
+                        {{ form_widget(form.categorie) }}
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Durée</label>
+                        {{ form_widget(form.duree) }}
+                    </div>
+                </div><!--end col-->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Date Sortie</label>
+                        {{ form_widget(form.datesortie) }}
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        {{ form_widget(form.description) }}
+                    </div>
+                </div>
+            </div><!--end row-->
+
+            {{ form_widget(form.Modifier) }}
+            {{ form_end(form) }}
+        </div>
+    </div><!--end col-->
+{% endblock %}
